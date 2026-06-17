@@ -67,10 +67,10 @@
 
     /* Nav link hover */
     .nav-link {
-      color: rgba(255,255,255,0.8);
+      color: rgba(20,20,20,0.7);
       transition: color 0.2s;
     }
-    .nav-link:hover { color: #fff; }
+    .nav-link:hover { color: #000; }
     nav.scrolled .nav-link { color: #374151; }
     nav.scrolled .nav-link:hover { color: #000; }
 
@@ -123,11 +123,11 @@
 
       <!-- Right: CTA + Hamburger -->
       <div class="flex items-center gap-4">
-        <a href="#contact" id="nav-cta" class="hidden md:inline-block bg-white text-black text-base font-medium px-7 py-2.5 rounded-full hover:bg-gray-100 transition-colors duration-200">
+        <a href="#contact" id="nav-cta" class="hidden md:inline-block bg-black text-white text-base font-medium px-7 py-2.5 rounded-full hover:bg-gray-800 transition-colors duration-200">
           Shop Now
         </a>
         <button id="hamburger" class="md:hidden p-2" aria-label="Toggle menu" aria-expanded="false">
-          <svg id="hamburger-icon" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <svg id="hamburger-icon" class="w-6 h-6 text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
         </button>
@@ -858,11 +858,9 @@
     navbar.style.backdropFilter = scrolled ? 'blur(20px)' : '';
     navbar.style.borderBottom = scrolled ? '1px solid rgba(0,0,0,0.08)' : '';
     if (navCta) {
-      navCta.className = scrolled
-        ? 'hidden md:inline-block bg-black text-white text-base font-medium px-7 py-2.5 rounded-full hover:bg-gray-800 transition-colors duration-200'
-        : 'hidden md:inline-block bg-white text-black text-base font-medium px-7 py-2.5 rounded-full hover:bg-gray-100 transition-colors duration-200';
+      navCta.className = 'hidden md:inline-block bg-black text-white text-base font-medium px-7 py-2.5 rounded-full hover:bg-gray-800 transition-colors duration-200';
     }
-    if (hamIcon) hamIcon.style.color = scrolled ? '#000' : '#fff';
+    if (hamIcon) hamIcon.style.color = '#000';
   }, { passive: true });
 
   /* ── Init ── */
